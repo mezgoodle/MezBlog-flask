@@ -9,7 +9,8 @@ app.config.from_object(Configuration)
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('index.html')
+    name = 'mezgoodle'
+    return render_template('index.html', name=name)
 
 if __name__ == '__main__':
     app.run()
