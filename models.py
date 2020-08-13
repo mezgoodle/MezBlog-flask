@@ -1,5 +1,4 @@
-from collections import defaultdict
-from datetime import date, datetime
+from datetime import datetime
 import re
 from app import db
 
