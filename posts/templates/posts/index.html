@@ -9,5 +9,6 @@
 {% block content %}
     {% for post in posts %}
         <p>{{post.title}}</p>
+        <a href="{{url_for('posts.post_detail', slug=post.slug)}}">{{post.title}}</a>
     {% endfor %}
 {% endblock %}
