@@ -1,10 +1,18 @@
 from datetime import datetime
 import re
+
+from sqlalchemy.orm import backref
 from app import db
 
 def slugify(s):
     pattern = r'[^\w+]'
     return re.sub(pattern, '-', s)
+
+
+post_tags = db.Table('post_tags',
+                    db.Column('post_id', db.Integer, db.ForeignKey('post.id')),
+                    db.Column('tag_id', db.Integer, db.ForeignKey('tag.id'))
+)
 
 
 class Post(db.Model):
@@ -17,6 +25,8 @@ class Post(db.Model):
     def __init__(self, *args, **kwargs):
         super(Post, self).__init__(*args, **kwargs)
         self.generate_slug()
+
+    tags = db.relationship('Tag', secondary=post_tags, backref=db.backref('posts', lazy='dynamic'))
 
     def generate_slug(self):
         if self.title:
