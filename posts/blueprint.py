@@ -14,4 +14,4 @@ def index():
 def post_detail(slug):
     post = Post.query.filter(Post.slug==slug).first()
     tags = post.tags
-    return render_template('posts/post_detail.html', post=post)
+    return render_template('posts/post_detail.html', post=post, tags=tags)
