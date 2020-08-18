@@ -7,5 +7,12 @@
     {{post.title}}
 {% endblock %}
 {% block content %}
-    {{post.body}}
+    <div class="tags">
+        {% for tag in tags %}
+            <span class="label label-primary">{{ tag.name }}</span>
+        {% endfor %}
+    </div>
+    <div class="main-content">
+        {{post.body}}
+    </div>
 {% endblock %}
