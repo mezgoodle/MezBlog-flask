@@ -23,6 +23,13 @@ def create_post():
     return render_template('posts/create_post.html', form=form)
 
 
+@posts.route('/<slug>/edit/', methods=['POST', 'GET'])
+def edit_post(slug):
+    post = Post.query.filter(Post.slug==slug).first()
+    if request.method == 'POST':
+        form = PostForm(formdata=request.form, obj=post)
+
+
 @posts.route('/')
 def index():
     q = request.args.get('q')
