@@ -32,7 +32,7 @@ def edit_post(slug):
         db.session.commit()
         return redirect(url_for('posts.detail', slug=post.slug))
     form = PostForm(obj=post)
-    return render_template('posts/edit.html', post=post, form=form)
+    return render_template('posts/edit_post.html', post=post, form=form)
 
 
 @posts.route('/')
