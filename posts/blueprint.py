@@ -1,4 +1,3 @@
-from operator import pos
 from models import Post, Tag
 from .forms import PostForm
 from app import db

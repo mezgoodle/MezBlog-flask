@@ -2,7 +2,6 @@ from datetime import datetime
 import re
 from app import db
 
-from sqlalchemy.orm import backref
 from flask_security import UserMixin, RoleMixin
 
 def slugify(s):
