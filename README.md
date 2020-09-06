@@ -1,95 +1,54 @@
 # MezBlog-flask
- My blog application on Flask
-
-# Project title
 
 [![Language](https://img.shields.io/badge/language-python-brightgreen?style=flat-square)](https://www.python.org/)
 
-A little info about your project and/ or overview that explains **what** the project is about.
-
-> Hello everyone! This is the repository of my package on Python "sync-folders".
+Hello everyone! This is the repository of my another blog application on Flask from YouTube lessons.
 
 ## Table of contents
 
-- [Project title](#project-title)
-- [The README Checklist](#the-readme-checklist)
+- [Table of contents](#table-of-contents)
 - [Motivation](#motivation)
-- [Build status](#build-status)
 - [Badges](#badges)
 - [Code style](#code-style)
-- [Screenshots](#screenshots)
 - [Tech/framework used](#techframework-used)
 - [Features](#features)
-- [Code Example](#code-example)
 - [Installation](#installation)
 - [Fast usage](#fast-usage)
-- [API Reference](#api-reference)
-- [Tests](#tests)
 - [Contribute](#contribute)
 - [Credits](#credits)
 - [License](#license)
 
-## The README Checklist
-
-A helpful checklist to gauge how your README is coming along:
-
-- [ ] One-liner explaining the purpose of the module
-- [ ] Necessary background context & links
-- [ ] Potentially unfamiliar terms link to informative sources
-- [ ] Clear, *runnable* example of usage
-- [ ] Installation instructions
-- [ ] Extensive API documentation
-- [ ] Performs [cognitive funneling](https://github.com/noffle/art-of-readme#cognitive-funneling)
-- [ ] Caveats and limitations mentioned up-front
-- [ ] Doesn't rely on images to relay critical information
-- [ ] License
-
 ## Motivation
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
-
-## Build status
-
-Build status of continus integration i.e. travis, appveyor etc.
-
-> Here you can see build status of [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration)/[continuous deployment](https://en.wikipedia.org/wiki/Continuous_deployment):
-
-[![Build Status](https://travis-ci.org/akashnimare/foco.svg?branch=master)](https://travis-ci.org/akashnimare/foco)
-[![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/akashnimare/foco?branch=master&svg=true)](https://ci.appveyor.com/project/akashnimare/foco/branch/master)
+I just want more practice with **Flask**.😄
 
 ## Badges
 
 Other badges
 
-[![Build Status](https://img.shields.io/badge/Theme-Template-brightgreen?style=flat-square)](https://www.google.com.ua/)
+[![Theme](https://img.shields.io/badge/Theme-Blog-brightgreen?style=flat-square)](https://uk.wikipedia.org/wiki/%D0%91%D0%BB%D0%BE%D0%B3)
+[![Platform](https://img.shields.io/badge/Platform-Flask-brightgreen?style=flat-square)](https://flask.palletsprojects.com/en/1.1.x/)
 
 ## Code style
 
-If you're using any code style like xo, standard etc. That will help others while contributing to your project.
+I'm using [Codacy](https://www.codacy.com/) for automate my code quality.
 
-> I'm using [Codacy](https://www.codacy.com/) for automate my code quality.
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/f385d31038844f33a9cc939e6a76204f)](https://www.codacy.com/manual/mezgoodle/MezBlog-flask?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mezgoodle/MezBlog-flask&amp;utm_campaign=Badge_Grade)
 
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
- 
-## Screenshots
-
-Include logo/demo screenshot etc.
 
 ## Tech/framework used
 
 **Built with**
 
-- [Electron](https://electron.atom.io)
+- [Python](https://www.python.org/)
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+- [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
+
+> Also other libraries you can see in the [requirements.txt](https://github.com/mezgoodle/MezBlog-flask/blob/master/requirements.txt)
 
 ## Features
 
-What makes your project stand out?
-
-> With my package you can **sync** two folders, **manage** logs files, **delete** empty folders and old files, read and create **zip-archives**.
-
-## Code Example
-
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+On the site with _flask_ you can **create** posts, tags, **manage** them with the admin panel.
 
 ## Installation
 
@@ -107,7 +66,20 @@ pip install -r requirements.txt
 
 ## Fast usage
 
-If people like your project they’ll want to learn how they can use it. To do so include step by step guide to use your project.
+1. Create database with the following commands:
+
+```
+> python
+> from app import db
+> db.create_all()
+> exit()
+```
+
+2. Start the development server:
+
+```
+> python3 app.py
+```
 
 ## Contribute
 
